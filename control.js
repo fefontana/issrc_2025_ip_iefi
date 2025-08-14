@@ -1,17 +1,17 @@
 /*
-PROFESOR
-ESTUDIANTE
-CONSIGNA
+
 Simulador de Cajero Automático
 
-Formato de entrega: Video grabado y entregado en formato digital (Google
-Drive, WeTransfer o similar)
+Programa funcional que simula el comportamiento basico de un cajero automático.
 
-Desarrollar un programa funcional que simule el comportamiento de un cajero automático.
+El mismo se presenta desde una interfaz web desarrollada en html y el codigo ejecutable en javascript.
+La maquetación consta de 3 secciones (divs):
+Un (1) "Administrador", un (1) "Operación" (cajero), Ticket (comprobante impreso).
 
-Además, deberán grabar un video grupal de entre 10 y 15 minutos, en el que 
-expliquen de forma clara y ordenada el desarrollo de su código,
-deteniéndose especialmente en las partes más críticas
+Detalle:
+- Administrador (con su titulo y sus buttons, serán como llaves o switchs de control del cajero accesible solamente para el tesorero del banco)
+- Operación (sería el cajero propiamente dicho, la pantalla y teclado de la terminal física)
+- Ticket (será un textarea donde se irá imprimiendo el resultado deseado como si fuera un comprobante impreso)
 
 */
 
@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// Evento para "crear" (carga crear.js)
 	document.getElementById('crear').addEventListener('click', () => {
-
-		//console.log("Creando maquina...");
 
 	    cargarScript('model.js', () => {
 
@@ -91,14 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	        // document.getElementById('function').value= "ON";
 	        // funciona solamente si el elemento con id="function" es un <input> o un <textarea>, 
 	        // es decir, un elemento de formulario que tenga una propiedad .value
+		
 	        document.getElementById('function').innerText = "ON";
 	        // funciona solamente si el elemento con id="function" es un <input> o un <textarea>, 
 	        // es decir, un elemento de formulario que tenga una propiedad .value
+		
 	        cambiarEstado('encendido');
 	});
 	document.getElementById('stop').addEventListener('click', () => {
 
-	        console.log(cajero.stop()); // 
+	        console.log(cajero.stop());
 	        document.getElementById('function').innerText= "OFF";
 	        cambiarEstado('apagado');
 	});
