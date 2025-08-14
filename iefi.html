@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Simulador de Cajero Automático</title>
+	<link rel="stylesheet" href="iefi.css">
+</head>
+<body>
+<p id="iefi">Simulador de Cajero Automático</p>
+
+<div class="contenedor-tablas">
+
+	<div>
+	<table border="1">
+	  <thead>
+	    <tr>
+	      <th>Administracion</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      	<td><button id="crear">Crear cajero</button></td>
+	    </tr>
+	    <tr>
+	      	<td><button id="status">Ver estado cajero</button></td>
+	    </tr>
+	    <tr>
+	      	<td><button id="cargar">Cargar cajero</button></td>
+	    </tr>
+	    <tr>
+	    	<td><button id="start">Encender cajero</button></td>
+	    </tr>
+	    <tr>
+	    	<td><button id="stop">Apagar cajero</button></td>
+	    </tr>
+	  </tbody>
+	</table>
+	</div>
+
+	<div id="operacion">
+		<table border="1">
+	  <thead>
+	    <tr>
+	      <th>Operacion</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<tr>
+	      	<td><p id="function"></p></td>
+	    </tr>
+	    <tr>
+	      	<td><button id="saldo">Ver saldo</button></td>
+	    </tr>
+	    <tr>
+	      	<td><input id="valor" /> <!-- input es una etiqueta auto-contenida -->
+	    </tr>
+	    <tr>
+	    	<td><button id="extraer">Extraer</button></td>
+	    </tr>
+
+	  </tbody>
+	</table>
+	</div>
+
+
+	<div>
+		<table border="1">
+	  <thead>
+	    <tr>
+	      <th>Ticket</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+
+	    <tr>
+	      	<td><textarea id="ticket"></textarea>
+	    </tr>
+
+	  </tbody>
+	</table>
+	</div>
+</div>
+
+<script src="view.js"></script>
+<script src="control.js"></script>
+</body>
+</html>
