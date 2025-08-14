@@ -1,4 +1,11 @@
-// Función que crea el cajero automático
+// La función model es un codigo de programa javascript que crea el objeto cajero automático en cuestión.
+// Se cuestiona:
+// ¿Donde "vive" este objeto? (indique su ubicación y existencia en un diagrama de arquitectura de sistema)
+// ¿Cuanto "vive" este objeto? Entonces, ¿Cómo se destruye?
+// ¿Cómo es posible crear tal estructura?
+// ¿Exactamente en que instante se genera? (indique la linea de código asociada)
+
+
 function model() {
     let estado = false;
     let hashTableMoney = new Map();
@@ -28,13 +35,6 @@ function model() {
             //estado = (nuevoEstado === 'ON');
             console.log(`Estado del cajero: ${estado ? '✅ Encendido' : '❌ Apagado'}`);
         },
-/*        run() {
-            if (!estado) {
-                console.log("El cajero está apagado.");
-                return;
-            }
-            console.log("Cajero en ejecución...");
-        },*/
         start() {
             estado = true;
             console.log("Cajero encendido.");
